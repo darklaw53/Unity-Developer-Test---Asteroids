@@ -5,16 +5,48 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public ShipLayoutSO shipLayoutSO;
-    public GameObject playerDeathExplosion;
     public int lives = 3;
 
-    public List<int> asteroidsPerLevel;
+    public GameObject bigUFO, smallUFO;
+    public int score;
 
+    public List<int> asteroidsPerLevel;
+    public List<int> UFOsPerLevel;
+    
     int currentLevel;
+    List<GameObject> UFOList = new List<GameObject>();
 
     void Start()
     {
         AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPerLevel[currentLevel]);
+
+        int x = GetBigUFOForLevel();
+        for (int i = 0; i < UFOsPerLevel[currentLevel]; i++)
+        {
+            if (i < x) UFOList.Add(bigUFO);
+            else UFOList.Add(smallUFO);
+        }
+
+        AsteroidManager.Instance.asteroidThreshold = GetAsteroidhreshold();
+    }
+
+    public void SpawnUFO()
+    {
+        int randomIndex = Random.Range(0, UFOList.Count);
+        EnemyManager.Instance.InstantiateUFOAtRandomEdge(UFOList[randomIndex]);
+        UFOList.RemoveAt(randomIndex);
+    }
+
+    private int GetAsteroidhreshold()
+    {
+        return Mathf.CeilToInt(asteroidsPerLevel[currentLevel] * 7) / (UFOsPerLevel[currentLevel] + 1);
+    }
+
+    private int GetBigUFOForLevel()
+    {
+        float ratio = 0.9f - currentLevel * 0.1f;
+        if (ratio < 0) ratio = 0;
+        return Mathf.CeilToInt(UFOsPerLevel[currentLevel] * ratio);
     }
 
     public void GameOver()
@@ -24,16 +56,12 @@ public class GameManager : Singleton<GameManager>
 
     //triggered when player looses a life
     public IEnumerator Exploded()
-    {
-        playerDeathExplosion.SetActive(true);
-        playerDeathExplosion.transform.position = CharacterControllerShip.Instance.transform.position;
-        
+    {   
         yield return new WaitForSeconds(2);
 
         CharacterControllerShip.Instance.transform.position = Vector3.zero;
         CharacterControllerShip.Instance.transform.rotation = transform.rotation;
         CharacterControllerShip.Instance.gameObject.SetActive(true);
-        playerDeathExplosion.SetActive(false);
     }
 
     public void NextLevel()
@@ -41,5 +69,13 @@ public class GameManager : Singleton<GameManager>
         currentLevel++;
 
         AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPerLevel[currentLevel]);
+
+        UFOList.Clear();
+        int x = GetBigUFOForLevel();
+        for (int i = 0; i < UFOsPerLevel[currentLevel]; i++)
+        {
+            if (i < x) UFOList.Add(bigUFO);
+            else UFOList.Add(smallUFO);
+        }
     }
 }

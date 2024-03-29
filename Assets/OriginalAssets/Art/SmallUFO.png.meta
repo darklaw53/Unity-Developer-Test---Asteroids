@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fea2f148451945b45ab2282de778b346
+guid: 25a7cbe4fbea26d499dff8085a08f92b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,19 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Turrets_0
+      name: SmallUFO_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb8916baf345a74ab20c480acd153f2
-      internalID: -580846135
+      spriteID: f6cf9278cd78f154cb9f9b3d46bc63d9
+      internalID: -751249561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Turrets_1
+      name: SmallUFO_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +145,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3b3b17bb660924e89dac4788a9b276
-      internalID: -1070422411
+      spriteID: cce1c882c034dd84093fb29f1dec2c36
+      internalID: 820262481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallUFO_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f5fe84a175e2848934fd989efc2066
+      internalID: -852862760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallUFO_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e958e579552950a48b50310f6ed4f5b7
+      internalID: 186808741
       vertices: []
       indices: 
       edges: []
@@ -175,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Turrets_0: -580846135
-      Turrets_1: -1070422411
+      SmallUFO_0: -751249561
+      SmallUFO_1: 820262481
+      SmallUFO_2: -852862760
+      SmallUFO_3: 186808741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

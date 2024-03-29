@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   rb2D: {fileID: 326518964462684685}
-  ammoTag: PlayerAmmunition
+  ammoTag: Ammunition
   smallerAsteroids: {fileID: 6818747127563918558, guid: 0b64e602dbe65c34e8f1738b2d13d0ce, type: 3}
 --- !u!50 &326518964462684685
 Rigidbody2D:

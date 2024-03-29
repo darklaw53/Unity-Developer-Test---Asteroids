@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 72
-        width: 8
-        height: 8
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 72
-        width: 8
-        height: 8
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 72
-        width: 8
-        height: 8
+        x: 32
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 72
-        width: 8
-        height: 8
+        x: 48
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_4
       rect:
         serializedVersion: 2
-        x: 40
-        y: 72
-        width: 8
-        height: 8
+        x: 64
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_5
       rect:
         serializedVersion: 2
-        x: 48
-        y: 72
-        width: 8
-        height: 8
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_6
       rect:
         serializedVersion: 2
-        x: 56
-        y: 72
-        width: 8
-        height: 8
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_7
       rect:
         serializedVersion: 2
-        x: 64
-        y: 72
-        width: 8
-        height: 8
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_8
       rect:
         serializedVersion: 2
-        x: 72
-        y: 72
-        width: 8
-        height: 8
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 8
-        height: 8
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_10
       rect:
         serializedVersion: 2
-        x: 8
-        y: 64
-        width: 8
-        height: 8
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,9 +358,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
-        width: 8
-        height: 8
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,9 +379,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
-        width: 8
-        height: 8
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_13
       rect:
         serializedVersion: 2
-        x: 40
-        y: 64
-        width: 8
-        height: 8
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_14
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
-        width: 8
-        height: 8
+        x: 64
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_15
       rect:
         serializedVersion: 2
-        x: 56
-        y: 64
-        width: 8
-        height: 8
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_16
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 8
-        height: 8
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_17
       rect:
         serializedVersion: 2
-        x: 72
-        y: 64
-        width: 8
-        height: 8
+        x: 64
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 56
-        width: 8
-        height: 8
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_19
       rect:
         serializedVersion: 2
-        x: 8
-        y: 56
-        width: 8
-        height: 8
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: SpaceShooterAssetPack_Ships_20
       rect:
         serializedVersion: 2
-        x: 16
-        y: 56
-        width: 8
-        height: 8
+        x: 64
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,1140 +559,6 @@ TextureImporter:
       bones: []
       spriteID: 9860798083b6b6b49b1a9d682de9cbeb
       internalID: 815265090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_21
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a448e308bc0f1344890a41f677fdd00
-      internalID: -1940585966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_22
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18a85aee3645779429750e82f464a0e6
-      internalID: 943523707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_23
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70a744d0837b04343a2c431f5ed9d4b0
-      internalID: -1153541455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_24
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3371f78f8fe5b7a47b95d54221f84b5e
-      internalID: 611532054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_25
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15d1832684175aa45a27f3a141a36044
-      internalID: 1123639152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_26
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 56
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7f9ffafe5dd1954cad95ded20b35e25
-      internalID: -649648887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_27
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2eb2eeb81a3bd8b4eb7a4aec6220f61a
-      internalID: -1440679157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_28
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f756742eb747f8489989d566c98b8f3
-      internalID: 1627037380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_29
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c2c7bbb7a468e543bb6768bcc16d615
-      internalID: -24694795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_30
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66786c1070cb4b64cb1d45816f6d8147
-      internalID: -426784157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_31
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17b742042a5a34b42aa3600f7a8f1b62
-      internalID: -943372710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_32
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 858b4f798bd13ce48ab5e2169516e7aa
-      internalID: -1622915311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_33
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34c9e44ee1dcaa947a803f292b6745c5
-      internalID: 1859796776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_34
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efa37542bed6f7e4c83cfcf864aa642a
-      internalID: 1029183143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_35
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb4568d49625621449cd225e769165eb
-      internalID: 107665878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_36
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12351cec7aa40a34eaa4783ed231b8aa
-      internalID: -1049000559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_37
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17be533145ab71b4599c497ec9845a07
-      internalID: 1463312092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_38
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 209dc674167d2ff4e9accc618cb9323c
-      internalID: -646821403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_39
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e962b27c21ae14f4aae128127d600594
-      internalID: 454265089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_40
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ad22167e9cb89f43a2be5c6236566ad
-      internalID: 2077685189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_41
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de524b8c31fbf4746b17e42a8152042c
-      internalID: -2058789364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_42
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dcb78f1919f92e419afeac1b6b1df3a
-      internalID: 921216233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_43
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a45454ae2ac5a94a9ba7b625f0f1a88
-      internalID: 1860782717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_44
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a587e14101f7f404c8c854163b17aedd
-      internalID: -794904915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_45
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97a1eb09327652643b05e2599e8cda43
-      internalID: -939399632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_46
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32b4c7cfba0926b4cb3fb0c7361b4482
-      internalID: 1986018595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_47
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f61575b538eeb0040bc990935c9f656d
-      internalID: -1203242091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_48
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a44f709737eafe74ab0bdb3773ddc5cc
-      internalID: 270326700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_49
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ecc7a27605af8649b561aeb3ffbf7e3
-      internalID: -1837252013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_50
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09f9fb433a4bb45409f27d852d61abc8
-      internalID: -1078028855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_51
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 537b15bb535c2754b9fdae58f6ce2043
-      internalID: 1748881420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_52
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 473d9f17dc9820b45aa8122cb2a45eb9
-      internalID: 902392923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_53
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35ae51d96ebae9645af59acfac07ce2d
-      internalID: -2065420526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_54
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2985417fc89aeec4cb5b43fe0bfa8882
-      internalID: 1770389082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_55
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 306dc6ce057f35f4fa1e4411da2f9e70
-      internalID: 1729710585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_56
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dd8e58ed82c64749801c690b9277f5d
-      internalID: 376285463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_57
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd46d4155de8b284ebf0f4a362c9d9eb
-      internalID: -1061073668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_58
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 544e9b01e4109304788255ec9439103f
-      internalID: -1518977667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_59
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d10c98d69edc5c0468cefa63bafe0a93
-      internalID: 1409250805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_60
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f9a26b8ce584e04a9ffcf64232c4c0c
-      internalID: 1750334466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_61
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88bd638422be3c14688c9fdef917f9a3
-      internalID: -1123227797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_62
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cb43292e150b364d88429df0e48bbf7
-      internalID: -1852537668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_63
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66da80c9bc5808b449cf32363e6d6aa3
-      internalID: -1360653486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_64
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c112360109559a949b0d9ad892fe4e99
-      internalID: 868370264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_65
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d462a78a8c40183408a2f824827b46c1
-      internalID: 226924257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_66
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8da165163aa0bc4088e382b268d0788
-      internalID: 1035636824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_67
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: daccd0a11563f3b49abeb035f3cee7fd
-      internalID: -620294942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_68
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3db56c18d99d2724e937c93ec3268d5c
-      internalID: -438243280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_69
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fd75f84dfdbd634bad61e0ebd0d5db2
-      internalID: 574091658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_70
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 508c60b0a55aa74439ff7fcdaaa2b9f5
-      internalID: -654356490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_71
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cbf6a9a749dc1f40950aaa77f9e60b4
-      internalID: -819737371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_72
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30776b37507add043864fc9e0106d599
-      internalID: -2000388107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_73
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8795372729c55744ab2c1c7d1865d62
-      internalID: 124969837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceShooterAssetPack_Ships_74
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2289defd55eb4b40a9e15cf7b792a10
-      internalID: -50328491
       vertices: []
       indices: 
       edges: []
@@ -1722,65 +588,11 @@ TextureImporter:
       SpaceShooterAssetPack_Ships_19: 1169935253
       SpaceShooterAssetPack_Ships_2: -1973601176
       SpaceShooterAssetPack_Ships_20: 815265090
-      SpaceShooterAssetPack_Ships_21: -1940585966
-      SpaceShooterAssetPack_Ships_22: 943523707
-      SpaceShooterAssetPack_Ships_23: -1153541455
-      SpaceShooterAssetPack_Ships_24: 611532054
-      SpaceShooterAssetPack_Ships_25: 1123639152
-      SpaceShooterAssetPack_Ships_26: -649648887
-      SpaceShooterAssetPack_Ships_27: -1440679157
-      SpaceShooterAssetPack_Ships_28: 1627037380
-      SpaceShooterAssetPack_Ships_29: -24694795
       SpaceShooterAssetPack_Ships_3: 799271476
-      SpaceShooterAssetPack_Ships_30: -426784157
-      SpaceShooterAssetPack_Ships_31: -943372710
-      SpaceShooterAssetPack_Ships_32: -1622915311
-      SpaceShooterAssetPack_Ships_33: 1859796776
-      SpaceShooterAssetPack_Ships_34: 1029183143
-      SpaceShooterAssetPack_Ships_35: 107665878
-      SpaceShooterAssetPack_Ships_36: -1049000559
-      SpaceShooterAssetPack_Ships_37: 1463312092
-      SpaceShooterAssetPack_Ships_38: -646821403
-      SpaceShooterAssetPack_Ships_39: 454265089
       SpaceShooterAssetPack_Ships_4: -678400366
-      SpaceShooterAssetPack_Ships_40: 2077685189
-      SpaceShooterAssetPack_Ships_41: -2058789364
-      SpaceShooterAssetPack_Ships_42: 921216233
-      SpaceShooterAssetPack_Ships_43: 1860782717
-      SpaceShooterAssetPack_Ships_44: -794904915
-      SpaceShooterAssetPack_Ships_45: -939399632
-      SpaceShooterAssetPack_Ships_46: 1986018595
-      SpaceShooterAssetPack_Ships_47: -1203242091
-      SpaceShooterAssetPack_Ships_48: 270326700
-      SpaceShooterAssetPack_Ships_49: -1837252013
       SpaceShooterAssetPack_Ships_5: 1225284409
-      SpaceShooterAssetPack_Ships_50: -1078028855
-      SpaceShooterAssetPack_Ships_51: 1748881420
-      SpaceShooterAssetPack_Ships_52: 902392923
-      SpaceShooterAssetPack_Ships_53: -2065420526
-      SpaceShooterAssetPack_Ships_54: 1770389082
-      SpaceShooterAssetPack_Ships_55: 1729710585
-      SpaceShooterAssetPack_Ships_56: 376285463
-      SpaceShooterAssetPack_Ships_57: -1061073668
-      SpaceShooterAssetPack_Ships_58: -1518977667
-      SpaceShooterAssetPack_Ships_59: 1409250805
       SpaceShooterAssetPack_Ships_6: -699152713
-      SpaceShooterAssetPack_Ships_60: 1750334466
-      SpaceShooterAssetPack_Ships_61: -1123227797
-      SpaceShooterAssetPack_Ships_62: -1852537668
-      SpaceShooterAssetPack_Ships_63: -1360653486
-      SpaceShooterAssetPack_Ships_64: 868370264
-      SpaceShooterAssetPack_Ships_65: 226924257
-      SpaceShooterAssetPack_Ships_66: 1035636824
-      SpaceShooterAssetPack_Ships_67: -620294942
-      SpaceShooterAssetPack_Ships_68: -438243280
-      SpaceShooterAssetPack_Ships_69: 574091658
       SpaceShooterAssetPack_Ships_7: -175486778
-      SpaceShooterAssetPack_Ships_70: -654356490
-      SpaceShooterAssetPack_Ships_71: -819737371
-      SpaceShooterAssetPack_Ships_72: -2000388107
-      SpaceShooterAssetPack_Ships_73: 124969837
-      SpaceShooterAssetPack_Ships_74: -50328491
       SpaceShooterAssetPack_Ships_8: 388409968
       SpaceShooterAssetPack_Ships_9: 563217634
   mipmapLimitGroupName: 

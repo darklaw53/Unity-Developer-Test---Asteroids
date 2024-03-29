@@ -20,11 +20,7 @@ public class Asteroid : MonoBehaviour
     {
         if (rb2D != null)
         {
-            Vector2 inheritedVelocity = CharacterControllerShip.Instance.rb2D.velocity;
-
-            Vector2 forwardImpulse = transform.up * speed;
-
-            rb2D.velocity = inheritedVelocity + forwardImpulse;
+            rb2D.velocity = transform.up * speed + new Vector3(rb2D.velocity.x, rb2D.velocity.y, 0);
         }
     }
 
@@ -39,6 +35,12 @@ public class Asteroid : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             CharacterControllerShip.Instance.Explode();
+            Split();
+        }
+
+        if (collision.CompareTag("Enemy"))
+        {
+            collision.GetComponent<Enemy>().Die();
             Split();
         }
     }

@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(ammunition, transform.position, transform.rotation);
+        var x = Instantiate(ammunition, transform.position, transform.rotation);
+        x.GetComponent<Rigidbody2D>().velocity = CharacterControllerShip.Instance.rb2D.velocity;
     }
 }

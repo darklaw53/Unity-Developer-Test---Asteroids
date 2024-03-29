@@ -21,7 +21,8 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     public Gun gun;
 
     [Header("OtherComponents")]
-    public GameObject explosion;
+    public GameObject deathExplosion;
+    public string ammoTag;
 
     //Private variables
     float rotationInput, thrustInput;
@@ -99,8 +100,19 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
         GameManager.Instance.lives--;
 
         gameObject.SetActive(false);
-        
+
+        Instantiate(deathExplosion, transform.position, transform.rotation);
+
         if (GameManager.Instance.lives <= 0) GameManager.Instance.GameOver();
         else GameManager.Instance.StartCoroutine("Exploded");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(ammoTag))
+        {
+            Destroy(collision.gameObject);
+            Explode();
+        }
     }
 }

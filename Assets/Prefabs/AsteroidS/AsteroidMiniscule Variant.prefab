@@ -157,6 +157,10 @@ PrefabInstance:
       value: -0.031077184
       objectReference: {fileID: 0}
     - target: {fileID: 8262651203894057258, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262651203894057258, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
       propertyPath: smallerAsteroids
       value: 
       objectReference: {fileID: 0}

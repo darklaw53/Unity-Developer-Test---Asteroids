@@ -6,24 +6,28 @@ public class AmmoBase : MonoBehaviour
 {
     public float speed = 1f;
     public float lifetime = 3f;
+    public string ammoTag;
 
     public Rigidbody2D rb2D;
 
     private void Start()
     {
         Invoke("DestroyAmmunition", lifetime);
+        float zRotation = transform.rotation.eulerAngles.z;
+        transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
         Impulse();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        gameObject.tag = ammoTag;
     }
 
     void Impulse()
     {
         if (rb2D != null)
         {
-            Vector2 inheritedVelocity = CharacterControllerShip.Instance.rb2D.velocity;
-
-            Vector2 forwardImpulse = transform.up * speed;
-
-            rb2D.velocity = inheritedVelocity + forwardImpulse;
+            rb2D.velocity = transform.up * speed + new Vector3 (rb2D.velocity.x, rb2D.velocity.y, 0);
         }
     }
 

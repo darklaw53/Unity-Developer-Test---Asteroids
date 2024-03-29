@@ -20,6 +20,9 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     public SpriteRenderer spriteRenderer;
     public Gun gun;
 
+    [Header("OtherComponents")]
+    public GameObject explosion;
+
     //Private variables
     float rotationInput, thrustInput;
     float nextFireTime = 0f;
@@ -89,5 +92,15 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     {
         Vector2 driftVelocity = -rb2D.velocity.normalized * driftAmount;
         rb2D.AddForce(driftVelocity);
+    }
+
+    public void Explode()
+    {
+        GameManager.Instance.lives--;
+
+        gameObject.SetActive(false);
+        
+        if (GameManager.Instance.lives <= 0) GameManager.Instance.GameOver();
+        else GameManager.Instance.StartCoroutine("Exploded");
     }
 }

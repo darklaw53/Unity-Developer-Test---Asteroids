@@ -77,6 +77,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2134944640, guid: e6c83bc1ec1e4734391ae2f5c59d3233, type: 3}
     - target: {fileID: 8262651203894057258, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
+      propertyPath: pointValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262651203894057258, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
       propertyPath: smallerAsteroids
       value: 
       objectReference: {fileID: 7038099965904947964, guid: 40caca87086576043a46744756000999, type: 3}

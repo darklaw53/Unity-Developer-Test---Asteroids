@@ -79,6 +79,7 @@ MonoBehaviour:
   ammoTag: Ammunition
   rb2D: {fileID: 7939209664691027040}
   deathExplosion: {fileID: 7718663155469597313, guid: 2b1115c83e7919e48a58b4769a2dc26f, type: 3}
+  pointValue: 1000
   targetRandomly: 0
   targetDirection: {x: 0, y: 0, z: 0, w: 0}
   maxDeviationAngle: 10

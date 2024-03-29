@@ -6,6 +6,7 @@ public class Asteroid : MonoBehaviour
 {
     public float speed = 1f;
     public Rigidbody2D rb2D;
+    public int pointValue;
 
     public string ammoTag;
 
@@ -47,6 +48,8 @@ public class Asteroid : MonoBehaviour
 
     void Split()
     {
+        GameManager.Instance.GainPoints(pointValue);
+
         if (smallerAsteroids != null)
         {
             var x = Random.Range(-0.5f, 0.5f);

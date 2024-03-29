@@ -18,10 +18,12 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     [Header("Ship Components")]
     public Rigidbody2D rb2D;
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer leftThruster, rightThruster;
     public Gun gun;
 
     [Header("OtherComponents")]
     public GameObject deathExplosion;
+    public GameObject warpJump;
     public string ammoTag;
 
     //Private variables
@@ -61,22 +63,37 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
         rotationInput = -Input.GetAxis("Horizontal");
         thrustInput = Input.GetAxis("Vertical");
 
-        if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) && Time.time > nextFireTime)
+        if ((Input.GetButton("Fire1") || Input.GetButton("Jump")) && Time.time > nextFireTime)
         {
             gun.Fire(); 
             nextFireTime = Time.time + fireCooldown;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            WarpJump();
+        }
+    }
+
+    void WarpJump()
+    {
+        Instantiate(warpJump, transform.position, transform.rotation);
+        GameManager.Instance.StartCoroutine("WarpJump");
+        gameObject.SetActive(false);
     }
 
     void Rotation()
     {
         float rotation = rotationInput * rotationSpeed * Time.deltaTime;
         transform.Rotate(Vector3.forward * rotation);
+
+        if (rotationInput < 0) leftThruster.enabled = true;
+        else if (rotationInput > 0) rightThruster.enabled = true;
     }
 
     void Thrust()
     {
-        if (thrustInput != 0f)
+        if (thrustInput > 0f)
         {
             Vector2 thrustForce = transform.up * thrustInput * thrustSpeed;
 
@@ -86,6 +103,14 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
             {
                 rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
             }
+
+            leftThruster.enabled = true;
+            rightThruster.enabled = true;
+        }
+        else if (rotationInput == 0)
+        {
+            leftThruster.enabled = false;
+            rightThruster.enabled = false;
         }
     }
 
@@ -98,13 +123,13 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     public void Explode()
     {
         GameManager.Instance.lives--;
-
-        gameObject.SetActive(false);
+        GameManager.Instance.LooseALife();
 
         Instantiate(deathExplosion, transform.position, transform.rotation);
 
         if (GameManager.Instance.lives <= 0) GameManager.Instance.GameOver();
         else GameManager.Instance.StartCoroutine("Exploded");
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

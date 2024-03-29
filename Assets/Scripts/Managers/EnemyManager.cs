@@ -30,10 +30,8 @@ public class EnemyManager : Singleton<EnemyManager>
                 spawnPosition = new Vector3(screenBounds.x + UFO.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
                 break;
         }
-        Vector3 directionToCenter = (new Vector3(Random.Range(-3, 4), Random.Range(-3, 4), 0) - spawnPosition).normalized;
 
         var x = Instantiate(UFO, spawnPosition, transform.rotation);
         x.transform.parent = enemyParent;
-        x.transform.up = directionToCenter;
     }
 }

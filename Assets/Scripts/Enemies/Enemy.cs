@@ -14,11 +14,12 @@ public class Enemy : MonoBehaviour
     public float changeIntervalMin = 1;
     public float changeIntervalMax = 5;
 
-    [Header("")]
+    [Header("Other Variables")]
     public float speed = 3f;
     public string ammoTag;
     public Rigidbody2D rb2D;
     public GameObject deathExplosion;
+    public int pointValue;
 
     bool flyRight;
     [HideInInspector] public bool targetRandomly;
@@ -96,6 +97,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        GameManager.Instance.GainPoints(pointValue);
         Instantiate(deathExplosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }

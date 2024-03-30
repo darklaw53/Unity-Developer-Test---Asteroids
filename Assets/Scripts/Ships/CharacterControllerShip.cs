@@ -15,32 +15,22 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     [Header("Ship Components")]
     public Rigidbody2D rb2D;
     public SpriteRenderer spriteRenderer;
-    public SpriteRenderer leftThruster, rightThruster, middleThruster, 
-        leftStrafeThruster, rightStrafeThruster, retroThruster, retroThruster2;
+    public SpriteRenderer leftThruster, rightThruster;
     public Gun gun;
 
     [Header("OtherComponents")]
     public GameObject deathExplosion;
     public GameObject warpJump;
-    public string ammoTag;
 
     //Private variables
-    float horizontalImput, thrustInput;
-    [HideInInspector] public bool _leftThrusterB, _rightThrusterB, _middleThrusterB,
-        _leftStrafeThrusterB, _rightStrafeThrusterB, _retroThrusterB, _retroThruster2B;
+    [HideInInspector] public float horizontalImput, thrustInput;
 
     private void Start()
     {
         //set ship variables from scriptableObject
         if (GameManager.Instance.shipLayoutSO != null)
         {
-            rotationSpeed = GameManager.Instance.shipLayoutSO.rotationSpeed;
-            thrustSpeed = GameManager.Instance.shipLayoutSO.thrustSpeed;
-            driftAmount = GameManager.Instance.shipLayoutSO.driftAmount;
             spriteRenderer.sprite = GameManager.Instance.shipLayoutSO.sprite;
-            var x = Instantiate(GameManager.Instance.shipLayoutSO.gunPrefab, gun.transform.parent);
-            Destroy(gun.gameObject);
-            gun = x.GetComponent<Gun>();
         }
     }
 
@@ -57,12 +47,12 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
         DetectInput();
     }
 
-    void DetectInput()
+    public virtual void DetectInput()
     {
         horizontalImput = -Input.GetAxis("Horizontal");
         thrustInput = Input.GetAxis("Vertical");
         
-        if ((Input.GetButton("Fire1") || Input.GetButton("Jump")) || rotationSpeed == 0)
+        if ((Input.GetButton("Fire1") || Input.GetButton("Jump")))
         {
             gun.Fire(); 
         }
@@ -80,40 +70,27 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
         gameObject.SetActive(false);
     }
 
-    void RotationAndStrafing()
+    public virtual void RotationAndStrafing()
     {
         if (horizontalImput != 0)
         {
             float rotation = horizontalImput * rotationSpeed * Time.deltaTime;
-            if (rotationSpeed != 0) transform.Rotate(Vector3.forward * rotation);
-            else
-            {
-                Vector2 thrustForce = transform.right * -horizontalImput * thrustSpeed;
-
-                rb2D.AddForce(thrustForce);
-
-                if (rb2D.velocity.magnitude > maxSpeed)
-                {
-                    rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
-                }
-            }
+            transform.Rotate(Vector3.forward * rotation);
 
             if (horizontalImput < 0)
             {
-                if (_leftThrusterB) leftThruster.enabled = true;
-                if (_leftStrafeThrusterB) leftStrafeThruster.enabled = true;
+                leftThruster.enabled = true;
             }
             else if (horizontalImput > 0)
             {
-                if (_rightThrusterB) rightThruster.enabled = true;
-                if (_rightStrafeThrusterB) rightStrafeThruster.enabled = true;
+                rightThruster.enabled = true;
             }
         }
     }
 
-    void Thrust()
+    public virtual void Thrust()
     {
-        if (thrustInput > 0f || (thrustInput < 0f && (_retroThrusterB || _retroThruster2B)))
+        if (thrustInput > 0f)
         {
             Vector2 thrustForce = transform.up * thrustInput * thrustSpeed;
 
@@ -124,27 +101,13 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
                 rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
             }
 
-            if (thrustInput > 0f)
-            { 
-                if (_leftThrusterB) leftThruster.enabled = true;
-                if (_rightThrusterB) rightThruster.enabled = true;
-                if (_middleThrusterB) middleThruster.enabled = true;
-            }
-            else
-            {
-                if (_retroThrusterB) retroThruster.enabled = true;
-                if (_retroThruster2B) retroThruster2.enabled = true;
-            }
+            leftThruster.enabled = true;
+            rightThruster.enabled = true;
         }
         else if (horizontalImput == 0)
         {
-            if (_leftThrusterB) leftThruster.enabled = false;
-            if (_rightThrusterB) rightThruster.enabled = false;
-            if (_middleThrusterB) middleThruster.enabled = false;
-            if (_retroThrusterB) retroThruster.enabled = false;
-            if (_retroThruster2B) retroThruster2.enabled = false;
-            if (_leftStrafeThrusterB) leftStrafeThruster.enabled = false;
-            if (_rightStrafeThrusterB) rightStrafeThruster.enabled = false;
+            leftThruster.enabled = false;
+            rightThruster.enabled = false;
         }
     }
 
@@ -168,7 +131,7 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(ammoTag))
+        if (collision.CompareTag("Ammunition"))
         {
             Destroy(collision.gameObject);
             Explode();

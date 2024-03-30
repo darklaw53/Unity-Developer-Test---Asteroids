@@ -17,7 +17,7 @@ public class ShipDesigner : MonoBehaviour
     public List<Sprite> shipsBlue = new List<Sprite>();
     public Image Preview;
 
-    public List<GameObject> guns = new List<GameObject>();
+    public List<GameObject> shipModel = new List<GameObject>();
 
     public Sprite patternGreen, patternRed, patternBlue;
     public Image patternPreview;
@@ -155,7 +155,7 @@ public class ShipDesigner : MonoBehaviour
     public void SaveAndReturn()
     {
         shipLayout.sprite = Preview.sprite;
-        shipLayout.gunPrefab = guns[currentShip];
+        shipLayout.prefab = shipModel[currentShip];
 
         switch (currentColor)
         {
@@ -170,94 +170,6 @@ public class ShipDesigner : MonoBehaviour
                 break;
             default:
                 shipLayout.RGB = 2;
-                break;
-        }
-
-        switch (currentShip)
-        {
-            case 0:
-                shipLayout.rotationSpeed = 180;
-                shipLayout.thrustSpeed = 5;
-                shipLayout.driftAmount = 1.5f;
-                shipLayout._rightThrusterB = true;
-                shipLayout._rightStrafeThrusterB = true;
-                shipLayout._retroThrusterB = false;
-                shipLayout._retroThruster2B = false;
-                shipLayout._leftStrafeThrusterB = false;
-                shipLayout._leftThrusterB = false;
-                shipLayout._middleThrusterB = false;
-                shipLayout.hitBoxOffset = new Vector2(0, 0);
-                shipLayout.hitBoxSize = new Vector2(0.4f, 0.66f);
-                break;
-            case 1:
-                shipLayout.rotationSpeed = 200;
-                shipLayout.thrustSpeed = 6;
-                shipLayout.driftAmount = 1.3f;
-                shipLayout._rightThrusterB = false;
-                shipLayout._rightStrafeThrusterB = false;
-                shipLayout._retroThrusterB = false;
-                shipLayout._retroThruster2B = false;
-                shipLayout._leftStrafeThrusterB = false;
-                shipLayout._leftThrusterB = false;
-                shipLayout._middleThrusterB = true;
-                shipLayout.hitBoxOffset = new Vector2(0, -0.06f);
-                shipLayout.hitBoxSize = new Vector2(0.4f, 0.53f);
-                break;
-            case 2:
-                shipLayout.rotationSpeed = 0;
-                shipLayout.thrustSpeed = 5;
-                shipLayout.driftAmount = 1.7f;
-                shipLayout._rightThrusterB = false;
-                shipLayout._rightStrafeThrusterB = true;
-                shipLayout._retroThrusterB = true;
-                shipLayout._retroThruster2B = false;
-                shipLayout._leftStrafeThrusterB = true;
-                shipLayout._leftThrusterB = false;
-                shipLayout._middleThrusterB = true;
-                shipLayout.hitBoxOffset = new Vector2(0, 0);
-                shipLayout.hitBoxSize = new Vector2(0.76f, 0.75f);
-                break;
-            case 3:
-                shipLayout.rotationSpeed = 100;
-                shipLayout.thrustSpeed = 4;
-                shipLayout.driftAmount = 1.5f;
-                shipLayout._rightThrusterB = false;
-                shipLayout._rightStrafeThrusterB = false;
-                shipLayout._retroThrusterB = false;
-                shipLayout._retroThruster2B = true;
-                shipLayout._leftStrafeThrusterB = false;
-                shipLayout._leftThrusterB = false;
-                shipLayout._middleThrusterB = true;
-                shipLayout.hitBoxOffset = new Vector2(0, 0);
-                shipLayout.hitBoxSize = new Vector2(0.62f, 0.86f);
-                break;
-            case 4:
-                shipLayout.rotationSpeed = 160;
-                shipLayout.thrustSpeed = 4;
-                shipLayout.driftAmount = 1.5f;
-                shipLayout._rightThrusterB = true;
-                shipLayout._rightStrafeThrusterB = true;
-                shipLayout._retroThrusterB = false;
-                shipLayout._retroThruster2B = false;
-                shipLayout._leftStrafeThrusterB = false;
-                shipLayout._leftThrusterB = false;
-                shipLayout._middleThrusterB = false;
-                shipLayout.hitBoxOffset = new Vector2(0, 0);
-                shipLayout.hitBoxSize = new Vector2(0.94f, 0.78f);
-                break;
-            default:
-                shipLayout.rotationSpeed = 180;
-                shipLayout.thrustSpeed = 5;
-                shipLayout.driftAmount = 1.5f;
-                shipLayout._rightThrusterB = true;
-                shipLayout._rightStrafeThrusterB = true;
-                shipLayout._retroThrusterB = false;
-                shipLayout._retroThruster2B = false;
-                shipLayout._leftStrafeThrusterB = false;
-                shipLayout._leftThrusterB = false;
-                shipLayout._middleThrusterB = false;
-                shipLayout.hitBoxOffset = new Vector2(0, 0);
-                shipLayout.hitBoxSize = new Vector2(0.4f, 0.66f);
                 break;
         }
     }

@@ -16,6 +16,28 @@ public class EnemyManager : Singleton<EnemyManager>
         screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
     }
 
+    public void SpawnUFO()
+    {
+        if (GameManager.Instance.UFOList.Count > 0)
+        {
+            int randomIndex = Random.Range(0, GameManager.Instance.UFOList.Count);
+            EnemyManager.Instance.InstantiateUFOAtRandomEdge(GameManager.Instance.UFOList[randomIndex]);
+            GameManager.Instance.UFOList.RemoveAt(randomIndex);
+        }
+    }
+
+    public int GetAsteroidhreshold()
+    {
+        return Mathf.CeilToInt(GameManager.Instance.asteroidsPertLevel * 7) / (GameManager.Instance.UFOsPerLevel + 1);
+    }
+
+    public int GetBigUFOForLevel()
+    {
+        float ratio = 0.7f - GameManager.Instance.currentLevel * 0.1f;
+        if (ratio < 0) ratio = 0;
+        return Mathf.CeilToInt(GameManager.Instance.UFOsPerLevel * ratio);
+    }
+
     public void InstantiateUFOAtRandomEdge(GameObject UFO)
     {
         Vector3 spawnPosition = Vector3.zero;

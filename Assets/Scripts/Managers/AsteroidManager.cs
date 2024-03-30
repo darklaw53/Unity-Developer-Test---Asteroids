@@ -62,7 +62,7 @@ public class AsteroidManager : Singleton<AsteroidManager>
         if (asteroidsDestroyed >= asteroidThreshold)
         {
             asteroidsDestroyed = 0;
-            GameManager.Instance.SpawnUFO();
+            EnemyManager.Instance.SpawnUFO();
         }
 
         if (numberOfActiveAsteroids <= 0) GameManager.Instance.NextLevel();

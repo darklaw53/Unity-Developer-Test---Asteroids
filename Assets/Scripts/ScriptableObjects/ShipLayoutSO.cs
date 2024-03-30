@@ -4,13 +4,6 @@ using UnityEngine;
 public class ShipLayoutSO : ScriptableObject
 {
     public Sprite sprite;
-    public GameObject gunPrefab;
-    public float rotationSpeed;
-    public float thrustSpeed;
-    public float driftAmount;
+    public GameObject prefab;
     public int RGB;
-
-    public Vector2 hitBoxOffset, hitBoxSize;
-    public bool _leftThrusterB, _rightThrusterB, _middleThrusterB,
-        _leftStrafeThrusterB, _rightStrafeThrusterB, _retroThrusterB, _retroThruster2B;
 }

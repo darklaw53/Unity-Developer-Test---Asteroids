@@ -12,13 +12,11 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     [Header("Drift Settings")]
     public float driftAmount = 0.1f;
 
-    [Header("Gun Settings")]
-    public float fireCooldown = 0.1f; 
-
     [Header("Ship Components")]
     public Rigidbody2D rb2D;
     public SpriteRenderer spriteRenderer;
-    public SpriteRenderer leftThruster, rightThruster;
+    public SpriteRenderer leftThruster, rightThruster, middleThruster, 
+        leftStrafeThruster, rightStrafeThruster, retroThruster, retroThruster2;
     public Gun gun;
 
     [Header("OtherComponents")]
@@ -27,8 +25,9 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     public string ammoTag;
 
     //Private variables
-    float rotationInput, thrustInput;
-    float nextFireTime = 0f;
+    float horizontalImput, thrustInput;
+    [HideInInspector] public bool _leftThrusterB, _rightThrusterB, _middleThrusterB,
+        _leftStrafeThrusterB, _rightStrafeThrusterB, _retroThrusterB, _retroThruster2B;
 
     private void Start()
     {
@@ -48,7 +47,7 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
     void FixedUpdate()
     {
         //Physics updates
-        Rotation();
+        RotationAndStrafing();
         Thrust();
         Drift();
     }
@@ -60,13 +59,12 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
 
     void DetectInput()
     {
-        rotationInput = -Input.GetAxis("Horizontal");
+        horizontalImput = -Input.GetAxis("Horizontal");
         thrustInput = Input.GetAxis("Vertical");
-
-        if ((Input.GetButton("Fire1") || Input.GetButton("Jump")) && Time.time > nextFireTime)
+        
+        if ((Input.GetButton("Fire1") || Input.GetButton("Jump")) || rotationSpeed == 0)
         {
             gun.Fire(); 
-            nextFireTime = Time.time + fireCooldown;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -82,18 +80,40 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
         gameObject.SetActive(false);
     }
 
-    void Rotation()
+    void RotationAndStrafing()
     {
-        float rotation = rotationInput * rotationSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.forward * rotation);
+        if (horizontalImput != 0)
+        {
+            float rotation = horizontalImput * rotationSpeed * Time.deltaTime;
+            if (rotationSpeed != 0) transform.Rotate(Vector3.forward * rotation);
+            else
+            {
+                Vector2 thrustForce = transform.right * -horizontalImput * thrustSpeed;
 
-        if (rotationInput < 0) leftThruster.enabled = true;
-        else if (rotationInput > 0) rightThruster.enabled = true;
+                rb2D.AddForce(thrustForce);
+
+                if (rb2D.velocity.magnitude > maxSpeed)
+                {
+                    rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
+                }
+            }
+
+            if (horizontalImput < 0)
+            {
+                if (_leftThrusterB) leftThruster.enabled = true;
+                if (_leftStrafeThrusterB) leftStrafeThruster.enabled = true;
+            }
+            else if (horizontalImput > 0)
+            {
+                if (_rightThrusterB) rightThruster.enabled = true;
+                if (_rightStrafeThrusterB) rightStrafeThruster.enabled = true;
+            }
+        }
     }
 
     void Thrust()
     {
-        if (thrustInput > 0f)
+        if (thrustInput > 0f || (thrustInput < 0f && (_retroThrusterB || _retroThruster2B)))
         {
             Vector2 thrustForce = transform.up * thrustInput * thrustSpeed;
 
@@ -104,13 +124,27 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
                 rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
             }
 
-            leftThruster.enabled = true;
-            rightThruster.enabled = true;
+            if (thrustInput > 0f)
+            { 
+                if (_leftThrusterB) leftThruster.enabled = true;
+                if (_rightThrusterB) rightThruster.enabled = true;
+                if (_middleThrusterB) middleThruster.enabled = true;
+            }
+            else
+            {
+                if (_retroThrusterB) retroThruster.enabled = true;
+                if (_retroThruster2B) retroThruster2.enabled = true;
+            }
         }
-        else if (rotationInput == 0)
+        else if (horizontalImput == 0)
         {
-            leftThruster.enabled = false;
-            rightThruster.enabled = false;
+            if (_leftThrusterB) leftThruster.enabled = false;
+            if (_rightThrusterB) rightThruster.enabled = false;
+            if (_middleThrusterB) middleThruster.enabled = false;
+            if (_retroThrusterB) retroThruster.enabled = false;
+            if (_retroThruster2B) retroThruster2.enabled = false;
+            if (_leftStrafeThrusterB) leftStrafeThruster.enabled = false;
+            if (_rightStrafeThrusterB) rightStrafeThruster.enabled = false;
         }
     }
 

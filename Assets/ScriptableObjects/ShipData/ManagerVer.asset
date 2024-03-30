@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c3d839a81a75442bdd70960aff1449, type: 3}
   m_Name: ManagerVer
   m_EditorClassIdentifier: 
-  sprite: {fileID: -195117851, guid: 9b5c5dccb837f2046a43ff0882010abb, type: 3}
-  gunPrefab: {fileID: 603576003763370293, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
-  rotationSpeed: 180
+  sprite: {fileID: 1190254718, guid: 9b5c5dccb837f2046a43ff0882010abb, type: 3}
+  gunPrefab: {fileID: 2361748923257489529, guid: 94d9259c11b0eec4cba548582aa7f038, type: 3}
+  rotationSpeed: 160
   thrustSpeed: 4
   driftAmount: 1.5
+  RGB: 3

@@ -22,7 +22,7 @@ public class ScreenWrapperManager : MonoBehaviour
     {
         if (boxCollider2D != null)
         {
-            if (!backup) boxCollider2D.size = new Vector2(screenBounds.x * 2f + .1f, screenBounds.y * 2f + .1f);
+            if (!backup) boxCollider2D.size = new Vector2(screenBounds.x * 3f + .1f, screenBounds.y * 2f + .1f);
             else boxCollider2D.size = new Vector2(screenBounds.x * 2f + 5f, screenBounds.y * 2f + 5f);
         }
         else

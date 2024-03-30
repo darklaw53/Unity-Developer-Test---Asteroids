@@ -33,6 +33,11 @@ public class Asteroid : MonoBehaviour
             Split();
         }
 
+        if (collision.CompareTag("MoonBeam"))
+        {
+            Split();
+        }
+
         if (collision.CompareTag("Player"))
         {
             CharacterControllerShip.Instance.Explode();

@@ -83,6 +83,11 @@ public class Enemy : MonoBehaviour
             Die();
         }
 
+        if (collision.CompareTag("MoonBeam"))
+        {
+            Die();
+        }
+
         if (collision.CompareTag("Player"))
         {
             CharacterControllerShip.Instance.Explode();

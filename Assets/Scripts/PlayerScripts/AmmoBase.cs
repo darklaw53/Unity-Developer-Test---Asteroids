@@ -18,12 +18,12 @@ public class AmmoBase : MonoBehaviour
         Impulse();
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         gameObject.tag = ammoTag;
     }
 
-    void Impulse()
+    protected virtual void Impulse()
     {
         if (rb2D != null)
         {
@@ -31,7 +31,7 @@ public class AmmoBase : MonoBehaviour
         }
     }
 
-    private void DestroyAmmunition()
+    void DestroyAmmunition()
     {
         Destroy(gameObject);
     }

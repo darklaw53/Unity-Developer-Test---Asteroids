@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -40,10 +41,44 @@ public class GameManager : Singleton<GameManager>
         AsteroidManager.Instance.asteroidThreshold = GetAsteroidhreshold();
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (CharacterControllerShip.Instance != null)
+        {
+            CharacterControllerShip.Instance._rightThrusterB = shipLayoutSO._rightThrusterB;
+            CharacterControllerShip.Instance._rightStrafeThrusterB = shipLayoutSO._rightStrafeThrusterB;
+            CharacterControllerShip.Instance._retroThrusterB = shipLayoutSO._retroThrusterB;
+            CharacterControllerShip.Instance._retroThruster2B = shipLayoutSO._retroThruster2B;
+            CharacterControllerShip.Instance._leftStrafeThrusterB = shipLayoutSO._leftStrafeThrusterB;
+            CharacterControllerShip.Instance._leftThrusterB = shipLayoutSO._leftThrusterB;
+            CharacterControllerShip.Instance._middleThrusterB = shipLayoutSO._middleThrusterB;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            var x = CharacterControllerShip.Instance.GetComponent<BoxCollider2D>();
+            x.offset = shipLayoutSO.hitBoxOffset;
+            x.size = shipLayoutSO.hitBoxSize;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1) scoreText = 
+                GameObject.FindWithTag("scoreText").GetComponent<TextMesh>();
+    }
+
     public void GainPoints(int points)
     {
         score += points;
-        scoreText.text = "" + score;
+        if (scoreText != null) scoreText.text = "" + score;
 
         gainedPoints += points;
         if (gainedPoints >= 10000)

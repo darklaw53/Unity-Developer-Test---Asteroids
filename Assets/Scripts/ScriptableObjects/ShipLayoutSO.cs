@@ -8,7 +8,9 @@ public class ShipLayoutSO : ScriptableObject
     public float rotationSpeed;
     public float thrustSpeed;
     public float driftAmount;
-    //public bool canRotate;
-    //public bool canThrust;
-    //public bool canDrift;
+    public int RGB;
+
+    public Vector2 hitBoxOffset, hitBoxSize;
+    public bool _leftThrusterB, _rightThrusterB, _middleThrusterB,
+        _leftStrafeThrusterB, _rightStrafeThrusterB, _retroThrusterB, _retroThruster2B;
 }

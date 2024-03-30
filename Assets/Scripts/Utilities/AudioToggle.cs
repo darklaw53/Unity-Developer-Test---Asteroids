@@ -6,10 +6,16 @@ using UnityEngine.UI;
 
 public class AudioToggle : MonoBehaviour
 {
-    public BoolSO mutedSO;
-    public AudioMixer audioMixer;
-    public Sprite muted, unmuted;
+    [Header("Images and Sprites")]
+    public Sprite muted;
+    public Sprite unmuted;
     public Image icon;
+
+    [Header("Scriptable Object")]
+    public BoolSO mutedSO;
+
+    [Header("Audio")]
+    public AudioMixer audioMixer;
 
     bool isMuted = false;
 

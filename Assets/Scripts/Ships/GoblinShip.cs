@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GoblinShip : CharacterControllerShip
 {
+    [Header("Middle Thruster")]
     public SpriteRenderer middleThruster;
 
     public override void DetectInput()

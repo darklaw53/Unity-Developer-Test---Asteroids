@@ -28,7 +28,7 @@ public class EnemyManager : Singleton<EnemyManager>
 
     public int GetAsteroidhreshold()
     {
-        return Mathf.CeilToInt(GameManager.Instance.asteroidsPertLevel * 7) / (GameManager.Instance.UFOsPerLevel + 1);
+        return Mathf.CeilToInt(GameManager.Instance.asteroidsPerLevel * 7) / (GameManager.Instance.UFOsPerLevel + 1);
     }
 
     public int GetBigUFOForLevel()

@@ -6,24 +6,30 @@ using TMPro;
 
 public class GameManager : Singleton<GameManager>
 {
+    [Header("Scriptable Objects")]
     public ShipLayoutSO shipLayoutSO;
     public ScoreBoardSO scoreBoardSO;
-    public int lives = 3;
 
-    public GameObject bigUFO, smallUFO;
+    [Header("Objects")]
+    public GameObject bigUFO;
+    public GameObject smallUFO;
     public GameObject extraLivesIcon;
     public Transform extraLivesHolder;
     public TextMeshProUGUI scoreText;
-    public int score = 0;
 
-    public int asteroidsPertLevel = 5;
+    [Header("Game Parameters")]
+    public int lives = 3;
+    public int score = 0;
+    public int asteroidsPerLevel = 5;
     public int UFOsPerLevel = 2;
     public int objectsInCenter;
     public float maxRespawnTime = 5f;
 
+    [Header("Audio")]
     public AudioSource backgroundMusic;
     public AudioClip gameOverSound;
 
+    // Internal Variables
     int gainedPoints = 0;
     bool waitingToRespawn;
     bool canGainPoints = true;
@@ -35,7 +41,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (SceneManager.GetActiveScene().buildIndex == 1) Instantiate(shipLayoutSO.prefab);
 
-        AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPertLevel);
+        AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPerLevel);
 
         for (int i = 0; i < lives; i++)
         {
@@ -135,10 +141,10 @@ public class GameManager : Singleton<GameManager>
     public void NextLevel()
     {
         currentLevel++;
-        asteroidsPertLevel++;
+        asteroidsPerLevel++;
         UFOsPerLevel++;
 
-        AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPertLevel);
+        AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPerLevel);
 
         UFOList.Clear();
         int x = EnemyManager.Instance.GetBigUFOForLevel();

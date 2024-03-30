@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CorvetteShip : CharacterControllerShip
 {
+    [Header("Shields")]
     public GameObject shields;
     public AudioSource shieldSound;
+
+    //internal
     bool shieldsUp = true;
 
     private void OnEnable()

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ProbeShip : CharacterControllerShip
 {
-    public SpriteRenderer middleThruster, leftStrafeThruster, rightStrafeThruster, retroThruster;
+    [Header("Thrusters")]
+    public SpriteRenderer middleThruster;
+    public SpriteRenderer leftStrafeThruster;
+    public SpriteRenderer rightStrafeThruster;
+    public SpriteRenderer retroThruster;
 
     public override void DetectInput()
     {

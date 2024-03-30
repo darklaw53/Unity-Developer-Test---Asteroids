@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,22 +13,39 @@ public class ShipDesigner : MonoBehaviour
         Blue
     }
 
+    [Header("Sprites")]
     public List<Sprite> shipsGreen = new List<Sprite>();
     public List<Sprite> shipsRed = new List<Sprite>();
     public List<Sprite> shipsBlue = new List<Sprite>();
-    public Image Preview;
-    public GameObject lockImage;
-    public AudioSource failSound, selectButton;
+    public Sprite patternGreen;
+    public Sprite patternRed;
+    public Sprite patternBlue;
 
+    [Header("Game Objects")]
     public List<GameObject> shipModel = new List<GameObject>();
+    public GameObject menuButtons;
+    public GameObject shipDesigner;
+    public GameObject lockImage;
 
-    public Sprite patternGreen, patternRed, patternBlue;
-    public Image patternPreview;
-
+    [Header("Scriptable Objects")]
     public ShipLayoutSO shipLayout;
 
-    public GameObject menuButtons, shipDesigner;
+    [Header("Audio")]
+    public AudioSource failSound;
+    public AudioSource selectButton;
 
+    [Header("Images")]
+    public Image Preview;
+    public Image patternPreview;
+
+    [Header("Texts")]
+    public TextMeshProUGUI _sidewinderInfo;
+    public TextMeshProUGUI _goblinInfo;
+    public TextMeshProUGUI _probeInfo;
+    public TextMeshProUGUI _minerInfo;
+    public TextMeshProUGUI _corvetteInfo;
+
+    //internal
     bool goblinUnlock, probeUnlock, miningUnlock, corvetteUnlock;
     int currentShip = 0;
     ColorType currentColor = ColorType.Green;
@@ -99,6 +117,39 @@ public class ShipDesigner : MonoBehaviour
         if (GameManager.Instance.scoreBoardSO.highScore > 1000) probeUnlock = true;
         if (GameManager.Instance.scoreBoardSO.highScore > 10000) miningUnlock = true;
         if (GameManager.Instance.scoreBoardSO.highScore > 20000) corvetteUnlock = true;
+
+        ChangeInfoText();
+    }
+
+    void ChangeInfoText()
+    {
+        _sidewinderInfo.enabled = false;
+        _goblinInfo.enabled = false;
+        _probeInfo.enabled = false;
+        _minerInfo.enabled = false;
+        _corvetteInfo.enabled = false;
+
+        switch (currentShip)
+        {
+            case 0:
+                _sidewinderInfo.enabled = true;
+                break;
+            case 1:
+                _goblinInfo.enabled = true;
+                break;
+            case 2:
+                _probeInfo.enabled = true;
+                break;
+            case 3:
+                _minerInfo.enabled = true;
+                break;
+            case 4:
+                _corvetteInfo.enabled = true;
+                break;
+            default:
+                _sidewinderInfo.enabled = true;
+                break;
+        }
     }
 
     public void NextShip()
@@ -126,6 +177,8 @@ public class ShipDesigner : MonoBehaviour
         {
             Preview.sprite = shipsBlue[currentShip];
         }
+
+        ChangeInfoText();
     }
 
     public void PreviousShip()
@@ -153,6 +206,8 @@ public class ShipDesigner : MonoBehaviour
         {
             Preview.sprite = shipsBlue[currentShip];
         }
+
+        ChangeInfoText();
     }
 
     public void ChangeToGreen()

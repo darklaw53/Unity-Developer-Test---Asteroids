@@ -18,6 +18,7 @@ public class AmmoBase : MonoBehaviour
         Impulse();
     }
 
+    //this is here so ships dont accidentally shoot themselves
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.CompareTag("Admin"))

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MiningShip : CharacterControllerShip
 {
+    [Header("Middle Thruster")]
     public SpriteRenderer middleThruster;
 
     public override void DetectInput()

@@ -5,11 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : Singleton<MenuManager>
 {
-    public GameObject pauseMenu, gameOverMenu;
     public TMP_InputField highScoreNameInput;
-    public AudioSource pauseSound, unpauseSound, confirmedSound, deniedSound;
 
-    string higScoreName;
+    [Header("GameObjects")]
+    public GameObject pauseMenu;
+    public GameObject gameOverMenu;
+
+    [Header("Audio")]
+    public AudioSource pauseSound;
+    public AudioSource unpauseSound;
+    public AudioSource confirmedSound;
+    public AudioSource deniedSound;
+
+    //internal
+    string highScoreName;
     bool isPaused = false;
 
     private void Update()
@@ -38,7 +47,7 @@ public class MenuManager : Singleton<MenuManager>
 
     public void UpdateRegisteredString()
     {
-        higScoreName = highScoreNameInput.text;
+        highScoreName = highScoreNameInput.text;
     }
 
     public void Restart()
@@ -53,13 +62,13 @@ public class MenuManager : Singleton<MenuManager>
 
     public void EnterHighScore()
     {
-        if (!string.IsNullOrEmpty(higScoreName) || GameManager.Instance.score <= 0)
+        if (!string.IsNullOrEmpty(highScoreName) || GameManager.Instance.score <= 0)
         {
             confirmedSound.Play();
             if (GameManager.Instance.score > 0)
             {
                 GameManager.Instance.scoreBoardSO.scores.Add
-                    (higScoreName + " - " + GameManager.Instance.score);
+                    (highScoreName + " - " + GameManager.Instance.score);
             }
 
             GameManager.Instance.scoreBoardSO.scores = Utilities.Instance.SortStringList(GameManager.Instance.scoreBoardSO.scores);

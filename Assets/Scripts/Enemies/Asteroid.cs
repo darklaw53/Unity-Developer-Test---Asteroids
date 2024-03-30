@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
+    [Header("Movement")]
     public float speed = 1f;
     public Rigidbody2D rb2D;
-    public int pointValue;
 
+    [Header("Rotation")]
     public float minTorque = -100f;
     public float maxTorque = 100f;
 
-    public string ammoTag;
-
+    [Header("OnDeath Variables")]
+    public int pointValue;
     public GameObject smallerAsteroids;
+
+    [Header("")]
+    public string ammoTag;
 
     private void Start()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AdvancedPlasmaGun : Gun
 {
+    //second gun
     public Transform firePoint2;
 
     protected override void InstantiateAmmo()

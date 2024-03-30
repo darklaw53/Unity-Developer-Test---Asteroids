@@ -6,6 +6,8 @@ using UnityEngine;
 public class ScreenWrapperManager : MonoBehaviour
 {
     public BoxCollider2D boxCollider2D;
+
+    [Header("Is this a backup?")]
     public bool backup;
 
     //private variables

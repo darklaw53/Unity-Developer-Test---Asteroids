@@ -16,20 +16,23 @@ public class Enemy : MonoBehaviour
 
     [Header("Other Variables")]
     public float speed = 3f;
+    public int pointValue;
     public string ammoTag;
     public Rigidbody2D rb2D;
     public GameObject deathExplosion;
-    public int pointValue;
 
+    //script variables
     bool flyRight;
-    [HideInInspector] public bool targetRandomly;
     [HideInInspector] public Quaternion targetDirection;
 
     protected virtual void Start()
     {
-        targetRandomly = true;
+        //does this fly right or left?
         flyRight = Random.value > 0.5f;
+
+        //normalise rotation
         transform.rotation = Quaternion.identity;
+
         StartCoroutine(ChangeDirectionRoutine());
         StartCoroutine(FireGun());
     }

@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public ScoreBoardSO scoreBoardSO;
 
     [Header("Objects")]
+    public GameObject defaultShip;
     public GameObject bigUFO;
     public GameObject smallUFO;
     public GameObject extraLivesIcon;
@@ -39,6 +40,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
+        if (shipLayoutSO.prefab != null) shipLayoutSO.prefab = defaultShip;
         if (SceneManager.GetActiveScene().buildIndex == 1) Instantiate(shipLayoutSO.prefab);
 
         AsteroidManager.Instance.InstantiatePrefabAtRandomEdge(asteroidsPerLevel);

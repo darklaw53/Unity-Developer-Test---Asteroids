@@ -1169,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipLayoutSO: {fileID: 11400000, guid: 5390915336bcc8a468341dc94becede7, type: 2}
   scoreBoardSO: {fileID: 11400000, guid: b4c12b722871ea945b128f3ab979bbed, type: 2}
+  defaultShip: {fileID: 8635288267656772315, guid: baf770e1604c22b46925a73ebb0ac829, type: 3}
   bigUFO: {fileID: 2212489299018342877, guid: 2559b48c38a6fda42837013bd6096949, type: 3}
   smallUFO: {fileID: 328765559242257642, guid: 02140af25067a63428cce86346d92f0a, type: 3}
   extraLivesIcon: {fileID: 800101567530957996, guid: 7d2920cb80324404c998537ee3bea805, type: 3}

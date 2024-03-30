@@ -2040,11 +2040,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80234d98fc0c3084bb0e749e2cd77ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mutedSO: {fileID: 11400000, guid: 2006dc3a47cecc94c9c7282279443b24, type: 2}
-  audioMixer: {fileID: 24100000, guid: 4a8213c03bd8d514ab51afc6dcd7f8e4, type: 2}
   muted: {fileID: 1513259755, guid: fecd98dd641dbf74292dcd55a814c754, type: 3}
   unmuted: {fileID: -506524923, guid: fecd98dd641dbf74292dcd55a814c754, type: 3}
   icon: {fileID: 1029284655}
+  mutedSO: {fileID: 11400000, guid: 2006dc3a47cecc94c9c7282279443b24, type: 2}
+  audioMixer: {fileID: 24100000, guid: 4a8213c03bd8d514ab51afc6dcd7f8e4, type: 2}
 --- !u!114 &1029284654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3212,11 +3212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80234d98fc0c3084bb0e749e2cd77ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mutedSO: {fileID: 11400000, guid: 2006dc3a47cecc94c9c7282279443b24, type: 2}
-  audioMixer: {fileID: 24100000, guid: 4a8213c03bd8d514ab51afc6dcd7f8e4, type: 2}
   muted: {fileID: 1513259755, guid: fecd98dd641dbf74292dcd55a814c754, type: 3}
   unmuted: {fileID: -506524923, guid: fecd98dd641dbf74292dcd55a814c754, type: 3}
   icon: {fileID: 1499261317}
+  mutedSO: {fileID: 11400000, guid: 2006dc3a47cecc94c9c7282279443b24, type: 2}
+  audioMixer: {fileID: 24100000, guid: 4a8213c03bd8d514ab51afc6dcd7f8e4, type: 2}
 --- !u!114 &1499261316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4098,9 +4098,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0d6bf976a4475458f97f5abc8ad5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highScoreNameInput: {fileID: 1380836355}
   pauseMenu: {fileID: 2007235170}
   gameOverMenu: {fileID: 1406364084}
-  highScoreNameInput: {fileID: 1380836355}
   pauseSound: {fileID: 1799015913}
   unpauseSound: {fileID: 1343131115}
   confirmedSound: {fileID: 692510377}
@@ -4287,14 +4287,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipLayoutSO: {fileID: 11400000, guid: 5390915336bcc8a468341dc94becede7, type: 2}
   scoreBoardSO: {fileID: 11400000, guid: b4c12b722871ea945b128f3ab979bbed, type: 2}
-  lives: 3
+  defaultShip: {fileID: 8635288267656772315, guid: baf770e1604c22b46925a73ebb0ac829, type: 3}
   bigUFO: {fileID: 2212489299018342877, guid: 2559b48c38a6fda42837013bd6096949, type: 3}
   smallUFO: {fileID: 328765559242257642, guid: 02140af25067a63428cce86346d92f0a, type: 3}
   extraLivesIcon: {fileID: 800101567530957996, guid: 7d2920cb80324404c998537ee3bea805, type: 3}
   extraLivesHolder: {fileID: 323522906}
   scoreText: {fileID: 750056898}
+  lives: 3
   score: 0
-  asteroidsPertLevel: 5
+  asteroidsPerLevel: 5
   UFOsPerLevel: 2
   objectsInCenter: 0
   maxRespawnTime: 7

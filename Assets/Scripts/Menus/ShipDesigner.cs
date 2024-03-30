@@ -16,6 +16,8 @@ public class ShipDesigner : MonoBehaviour
     public List<Sprite> shipsRed = new List<Sprite>();
     public List<Sprite> shipsBlue = new List<Sprite>();
     public Image Preview;
+    public GameObject lockImage;
+    public AudioSource failSound, selectButton;
 
     public List<GameObject> shipModel = new List<GameObject>();
 
@@ -24,6 +26,9 @@ public class ShipDesigner : MonoBehaviour
 
     public ShipLayoutSO shipLayout;
 
+    public GameObject menuButtons, shipDesigner;
+
+    bool goblinUnlock, probeUnlock, miningUnlock, corvetteUnlock;
     int currentShip = 0;
     ColorType currentColor = ColorType.Green;
 
@@ -89,6 +94,11 @@ public class ShipDesigner : MonoBehaviour
         }
 
         Preview.sprite = spriteVar;
+
+        if (GameManager.Instance.scoreBoardSO.highScore > 10) goblinUnlock = true;
+        if (GameManager.Instance.scoreBoardSO.highScore > 1000) probeUnlock = true;
+        if (GameManager.Instance.scoreBoardSO.highScore > 10000) miningUnlock = true;
+        if (GameManager.Instance.scoreBoardSO.highScore > 20000) corvetteUnlock = true;
     }
 
     public void NextShip()
@@ -98,6 +108,11 @@ public class ShipDesigner : MonoBehaviour
         {
             currentShip = 0;
         }
+
+        if (currentShip == 0 || (currentShip == 1 && goblinUnlock) || 
+            (currentShip == 2 && probeUnlock) || (currentShip == 3 && miningUnlock)
+            || (currentShip == 4 && corvetteUnlock)) lockImage.SetActive(false);
+        else lockImage.SetActive(true);
 
         if (currentColor == ColorType.Green)
         {
@@ -120,6 +135,11 @@ public class ShipDesigner : MonoBehaviour
         {
             currentShip = shipsGreen.Count-1;
         }
+
+        if (currentShip == 0 || (currentShip == 1 && goblinUnlock) ||
+            (currentShip == 2 && probeUnlock) || (currentShip == 3 && miningUnlock)
+            || (currentShip == 4 && corvetteUnlock)) lockImage.SetActive(false);
+        else lockImage.SetActive(true);
 
         if (currentColor == ColorType.Green)
         {
@@ -158,23 +178,34 @@ public class ShipDesigner : MonoBehaviour
 
     public void SaveAndReturn()
     {
-        shipLayout.sprite = Preview.sprite;
-        shipLayout.prefab = shipModel[currentShip];
-
-        switch (currentColor)
+        if (lockImage.activeSelf)
         {
-            case ColorType.Red:
-                shipLayout.RGB = 1;
-                break;
-            case ColorType.Green:
-                shipLayout.RGB = 2;
-                break;
-            case ColorType.Blue:
-                shipLayout.RGB = 3;
-                break;
-            default:
-                shipLayout.RGB = 2;
-                break;
+            failSound.Play();
+        }
+        else
+        {
+            shipLayout.sprite = Preview.sprite;
+            shipLayout.prefab = shipModel[currentShip];
+
+            switch (currentColor)
+            {
+                case ColorType.Red:
+                    shipLayout.RGB = 1;
+                    break;
+                case ColorType.Green:
+                    shipLayout.RGB = 2;
+                    break;
+                case ColorType.Blue:
+                    shipLayout.RGB = 3;
+                    break;
+                default:
+                    shipLayout.RGB = 2;
+                    break;
+            }
+
+            selectButton.Play();
+            menuButtons.SetActive(true);
+            shipDesigner.SetActive(false);
         }
     }
 }

@@ -20,7 +20,10 @@ public class AmmoBase : MonoBehaviour
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
-        gameObject.tag = ammoTag;
+        if (!collision.CompareTag("Admin"))
+        {
+            gameObject.tag = ammoTag;
+        }
     }
 
     protected virtual void Impulse()

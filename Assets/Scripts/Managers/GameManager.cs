@@ -22,7 +22,9 @@ public class GameManager : Singleton<GameManager>
     public AudioSource backgroundMusic;
     public AudioClip gameOverSound;
 
+    int objectsInCenter;
     int gainedPoints = 0;
+    bool waitingToRespawn;
     bool canGainPoints = true;
     [HideInInspector] public int currentLevel;
     [HideInInspector] public List<GameObject> UFOList = new List<GameObject>();
@@ -92,9 +94,16 @@ public class GameManager : Singleton<GameManager>
     {
         yield return new WaitForSeconds(2);
 
-        CharacterControllerShip.Instance.transform.position = Vector3.zero;
-        CharacterControllerShip.Instance.transform.rotation = transform.rotation;
-        CharacterControllerShip.Instance.gameObject.SetActive(true);
+        if (objectsInCenter <= 0)
+        {
+            CharacterControllerShip.Instance.transform.position = Vector3.zero;
+            CharacterControllerShip.Instance.transform.rotation = transform.rotation;
+            CharacterControllerShip.Instance.gameObject.SetActive(true);
+        }
+        else
+        {
+            waitingToRespawn = true;
+        }
     }
 
     //triggered when sidewinder ship uses its special ability
@@ -121,6 +130,24 @@ public class GameManager : Singleton<GameManager>
         {
             if (i < x) UFOList.Add(bigUFO);
             else UFOList.Add(smallUFO);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        objectsInCenter++;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        objectsInCenter--;
+
+        if (objectsInCenter <= 0 && waitingToRespawn)
+        {
+            waitingToRespawn = false;
+            CharacterControllerShip.Instance.transform.position = Vector3.zero;
+            CharacterControllerShip.Instance.transform.rotation = transform.rotation;
+            CharacterControllerShip.Instance.gameObject.SetActive(true);
         }
     }
 }

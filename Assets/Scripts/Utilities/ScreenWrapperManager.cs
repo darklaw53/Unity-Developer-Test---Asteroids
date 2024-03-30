@@ -69,29 +69,49 @@ public class ScreenWrapperManager : MonoBehaviour
         }
         else //for the backup colider to catch asteroids that slip out
         {
-            Vector3 newPosition = Vector3.zero;
-            GameObject obj = objectTransform.gameObject;
-
-            int edgeIndex = Random.Range(0, 4);
-            switch (edgeIndex)
+            if (objectTransform.CompareTag("Enemy"))
             {
-                case 0: // Top edge
-                    newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y + obj.transform.localScale.y / 1.5f, 0f);
-                    break;
-                case 1: // Bottom edge
-                    newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), -screenBounds.y - obj.transform.localScale.y / 1.5f, 0f);
-                    break;
-                case 2: // Left edge
-                    newPosition = new Vector3(-screenBounds.x - obj.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
-                    break;
-                case 3: // Right edge
-                    newPosition = new Vector3(screenBounds.x + obj.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
-                    break;
-            }
+                Vector3 newPosition = Vector3.zero;
 
-            Vector3 directionToCenter = (new Vector3(Random.Range(-3, 4), Random.Range(-3, 4), 0) - newPosition).normalized;
-            obj.transform.position = newPosition;
-            obj.transform.up = directionToCenter;
+                int edgeIndex = Random.Range(0, 2);
+                switch (edgeIndex)
+                {
+                    case 0: // Left edge
+                        newPosition = new Vector3(-screenBounds.x - objectTransform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
+                        break;
+                    case 1: // Right edge
+                        newPosition = new Vector3(screenBounds.x + objectTransform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
+                        break;
+                }
+
+                objectTransform.position = newPosition;
+            }
+            else
+            {
+                Vector3 newPosition = Vector3.zero;
+                GameObject obj = objectTransform.gameObject;
+
+                int edgeIndex = Random.Range(0, 4);
+                switch (edgeIndex)
+                {
+                    case 0: // Top edge
+                        newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y + obj.transform.localScale.y / 1.5f, 0f);
+                        break;
+                    case 1: // Bottom edge
+                        newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), -screenBounds.y - obj.transform.localScale.y / 1.5f, 0f);
+                        break;
+                    case 2: // Left edge
+                        newPosition = new Vector3(-screenBounds.x - obj.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
+                        break;
+                    case 3: // Right edge
+                        newPosition = new Vector3(screenBounds.x + obj.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
+                        break;
+                }
+
+                Vector3 directionToCenter = (new Vector3(Random.Range(-3, 4), Random.Range(-3, 4), 0) - newPosition).normalized;
+                obj.transform.position = newPosition;
+                obj.transform.up = directionToCenter;
+            }
         }
     }
 

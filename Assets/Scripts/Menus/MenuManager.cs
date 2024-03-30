@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +7,7 @@ public class MenuManager : Singleton<MenuManager>
 {
     public GameObject pauseMenu, gameOverMenu;
     public TMP_InputField highScoreNameInput;
-    public AudioSource pauseSound, unpauseSound;
+    public AudioSource pauseSound, unpauseSound, confirmedSound, deniedSound;
 
     string higScoreName;
     bool isPaused = false;
@@ -52,8 +53,9 @@ public class MenuManager : Singleton<MenuManager>
 
     public void EnterHighScore()
     {
-        if (higScoreName.Length > 0 || GameManager.Instance.score <= 0)
+        if (!string.IsNullOrEmpty(higScoreName) || GameManager.Instance.score <= 0)
         {
+            confirmedSound.Play();
             if (GameManager.Instance.score > 0)
             {
                 GameManager.Instance.scoreBoardSO.scores.Add
@@ -63,9 +65,10 @@ public class MenuManager : Singleton<MenuManager>
             GameManager.Instance.scoreBoardSO.scores = Utilities.Instance.SortStringList(GameManager.Instance.scoreBoardSO.scores);
             GameManager.Instance.scoreBoardSO.highScore = Utilities.Instance.GetNumberFromString(GameManager.Instance.scoreBoardSO.scores[0]);
 
-            if (GameManager.Instance.scoreBoardSO.scores.Count > 10) GameManager.Instance.scoreBoardSO.scores.RemoveAt (GameManager.Instance.scoreBoardSO.scores.Count -1);
+            if (GameManager.Instance.scoreBoardSO.scores.Count > 10) GameManager.Instance.scoreBoardSO.scores.RemoveAt(GameManager.Instance.scoreBoardSO.scores.Count - 1);
 
             ReturnToMainMenu();
         }
+        else deniedSound.Play();
     }
 }

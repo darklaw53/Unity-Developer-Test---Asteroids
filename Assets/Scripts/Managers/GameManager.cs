@@ -18,11 +18,12 @@ public class GameManager : Singleton<GameManager>
 
     public int asteroidsPertLevel = 5;
     public int UFOsPerLevel = 2;
+    public int objectsInCenter;
+    public float maxRespawnTime = 5f;
 
     public AudioSource backgroundMusic;
     public AudioClip gameOverSound;
 
-    int objectsInCenter;
     int gainedPoints = 0;
     bool waitingToRespawn;
     bool canGainPoints = true;
@@ -96,13 +97,28 @@ public class GameManager : Singleton<GameManager>
 
         if (objectsInCenter <= 0)
         {
-            CharacterControllerShip.Instance.transform.position = Vector3.zero;
-            CharacterControllerShip.Instance.transform.rotation = transform.rotation;
-            CharacterControllerShip.Instance.gameObject.SetActive(true);
+            Respawn();
         }
         else
         {
             waitingToRespawn = true;
+            Invoke("RespawnIfWaiting", maxRespawnTime);
+        }
+    }
+
+    void Respawn()
+    {
+        CharacterControllerShip.Instance.transform.position = Vector3.zero;
+        CharacterControllerShip.Instance.transform.rotation = transform.rotation;
+        CharacterControllerShip.Instance.gameObject.SetActive(true);
+    }
+
+    void RespawnIfWaiting()
+    {
+        if (waitingToRespawn)
+        {
+            waitingToRespawn = false;
+            Respawn();
         }
     }
 
@@ -144,10 +160,9 @@ public class GameManager : Singleton<GameManager>
 
         if (objectsInCenter <= 0 && waitingToRespawn)
         {
+            Respawn();
             waitingToRespawn = false;
-            CharacterControllerShip.Instance.transform.position = Vector3.zero;
-            CharacterControllerShip.Instance.transform.rotation = transform.rotation;
-            CharacterControllerShip.Instance.gameObject.SetActive(true);
+            CancelInvoke("RespawnIfWaiting");
         }
     }
 }

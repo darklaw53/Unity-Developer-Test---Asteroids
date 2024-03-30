@@ -12,12 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c49548a7164034290bbf3a641385c0, type: 3}
   m_Name: ScoreBoard
   m_EditorClassIdentifier: 
-  highScore: 92600
-  scores:
-  - fdaf - 92600
-  - mooner - 27760
-  - dg - 14630
-  - ' - 13710'
-  - Marc - 8050
-  - ads - 4370
-  - df - 2550
+  highScore: 0
+  scores: []

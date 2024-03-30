@@ -4296,6 +4296,8 @@ MonoBehaviour:
   score: 0
   asteroidsPertLevel: 5
   UFOsPerLevel: 2
+  objectsInCenter: 0
+  maxRespawnTime: 7
   backgroundMusic: {fileID: 1829572884}
   gameOverSound: {fileID: 8300000, guid: 953ac0e6656f4b548ad6e4d993a00614, type: 3}
   currentLevel: 0

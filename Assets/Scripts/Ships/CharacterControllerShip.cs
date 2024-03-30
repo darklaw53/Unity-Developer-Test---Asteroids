@@ -79,11 +79,11 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
 
             if (horizontalImput < 0)
             {
-                leftThruster.enabled = true;
+                leftThruster.gameObject.SetActive(true);
             }
             else if (horizontalImput > 0)
             {
-                rightThruster.enabled = true;
+                rightThruster.gameObject.SetActive(true);
             }
         }
     }
@@ -101,13 +101,13 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
                 rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
             }
 
-            leftThruster.enabled = true;
-            rightThruster.enabled = true;
+            leftThruster.gameObject.SetActive(true);
+            rightThruster.gameObject.SetActive(true);
         }
         else if (horizontalImput == 0)
         {
-            leftThruster.enabled = false;
-            rightThruster.enabled = false;
+            leftThruster.gameObject.SetActive(false);
+            rightThruster.gameObject.SetActive(false);
         }
     }
 

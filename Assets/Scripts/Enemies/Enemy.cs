@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     {
         targetRandomly = true;
         flyRight = Random.value > 0.5f;
+        transform.rotation = Quaternion.identity;
         StartCoroutine(ChangeDirectionRoutine());
         StartCoroutine(FireGun());
     }

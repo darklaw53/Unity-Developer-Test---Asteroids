@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class MenuManager : Singleton<MenuManager>
 {
     public GameObject pauseMenu, gameOverMenu;
     public TMP_InputField highScoreNameInput;
+    public AudioSource pauseSound, unpauseSound;
 
     string higScoreName;
     bool isPaused = false;
@@ -27,12 +24,14 @@ public class MenuManager : Singleton<MenuManager>
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
             Time.fixedDeltaTime = 0;
+            pauseSound.Play();
         }
         else
         {
             pauseMenu.SetActive(false);
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02f;
+            unpauseSound.Play();
         }
     }
 

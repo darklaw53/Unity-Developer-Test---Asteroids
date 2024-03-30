@@ -17,13 +17,21 @@ PrefabInstance:
       value: 0.05180383
       objectReference: {fileID: 0}
     - target: {fileID: 1635105410759346202, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14716323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635105410759346202, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_Offset.x
       value: 0.026021125
       objectReference: {fileID: 0}
     - target: {fileID: 1635105410759346202, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_Offset.y
-      value: -0.023999996
+      value: 0.0008516088
       objectReference: {fileID: 0}
+    - target: {fileID: 1944444138847714307, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 350e3c4cdb5495a48a0130679ce9f0c2, type: 3}
     - target: {fileID: 5408220181337844258, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: lifetime
       value: 0.5
@@ -46,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7438664068305162482, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438664068305162482, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

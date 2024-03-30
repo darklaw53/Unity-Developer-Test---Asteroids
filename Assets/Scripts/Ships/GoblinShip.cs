@@ -30,11 +30,11 @@ public class GoblinShip : CharacterControllerShip
                 rb2D.velocity = rb2D.velocity.normalized * maxSpeed;
             }
 
-            middleThruster.enabled = true;
+            middleThruster.gameObject.SetActive(true);
         }
         else
         {
-            middleThruster.enabled = false;
+            middleThruster.gameObject.SetActive(false);
         }
     }
 

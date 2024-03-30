@@ -76,6 +76,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2134944640, guid: e6c83bc1ec1e4734391ae2f5c59d3233, type: 3}
+    - target: {fileID: 6817294271546346254, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
+      propertyPath: m_Radius
+      value: 0.86629367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817294271546346254, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.026325822
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817294271546346254, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.064949274
+      objectReference: {fileID: 0}
     - target: {fileID: 8262651203894057258, guid: 51302b1c0f4709d45a456ee357c232fa, type: 3}
       propertyPath: pointValue
       value: 20

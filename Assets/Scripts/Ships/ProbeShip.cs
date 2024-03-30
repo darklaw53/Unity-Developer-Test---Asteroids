@@ -29,19 +29,19 @@ public class ProbeShip : CharacterControllerShip
 
             if (thrustInput > 0f)
             {
-                middleThruster.enabled = true;
+                middleThruster.gameObject.SetActive(true);
             }
             else
             {
-                retroThruster.enabled = true;
+                retroThruster.gameObject.SetActive(true);
             }
         }
         else if (horizontalImput == 0)
         {
-            middleThruster.enabled = false;
-            retroThruster.enabled = false;
-            leftStrafeThruster.enabled = false;
-            rightStrafeThruster.enabled = false;
+            middleThruster.gameObject.SetActive(false);
+            retroThruster.gameObject.SetActive(false);
+            leftStrafeThruster.gameObject.SetActive(false);
+            rightStrafeThruster.gameObject.SetActive(false);
         }
     }
 
@@ -60,11 +60,11 @@ public class ProbeShip : CharacterControllerShip
 
             if (horizontalImput < 0)
             {
-                leftStrafeThruster.enabled = true;
+                leftStrafeThruster.gameObject.SetActive(true);
             }
             else
             {
-                rightStrafeThruster.enabled = true;
+                rightStrafeThruster.gameObject.SetActive(true);
             }
         }
     }

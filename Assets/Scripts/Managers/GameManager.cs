@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Linq;
 using TMPro;
 
 public class GameManager : Singleton<GameManager>
@@ -19,6 +18,9 @@ public class GameManager : Singleton<GameManager>
 
     public int asteroidsPertLevel = 5;
     public int UFOsPerLevel = 2;
+
+    public AudioSource backgroundMusic;
+    public AudioClip gameOverSound;
 
     int gainedPoints = 0;
     bool canGainPoints = true;
@@ -51,6 +53,9 @@ public class GameManager : Singleton<GameManager>
     public void GameOver()
     {
         canGainPoints = false;
+        backgroundMusic.loop = false;
+        backgroundMusic.clip = gameOverSound;
+        backgroundMusic.Play();
         MenuManager.Instance.gameOverMenu.SetActive(true);
     }
 

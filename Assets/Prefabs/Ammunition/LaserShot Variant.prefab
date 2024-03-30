@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1944444138847714307, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ee50ff6dfa27444bb61ac2ddde65460, type: 3}
     - target: {fileID: 6593048817365041452, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -46,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7438664068305162482, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438664068305162482, guid: 1346355ab4c2492499f7c9f2512135e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

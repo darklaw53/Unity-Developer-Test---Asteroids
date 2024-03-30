@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class CorvetteShip : CharacterControllerShip
 {
+    public GameObject shields;
+    public AudioSource shieldSound;
+    bool shieldsUp = true;
+
+    private void OnEnable()
+    {
+        shieldsUp = true;
+        shields.SetActive(true);
+    }
+
     public override void DetectInput()
     {
         horizontalImput = -Input.GetAxis("Horizontal");
@@ -13,5 +23,23 @@ public class CorvetteShip : CharacterControllerShip
         {
             gun.Fire();
         }
+    }
+
+    void RechargeShields()
+    {
+        shieldsUp = true;
+        shields.SetActive(true);
+    }
+
+    public override void Explode()
+    {
+        if (shieldsUp)
+        {
+            shieldsUp = false;
+            shields.SetActive(false);
+            shieldSound.Play();
+            Invoke("RechargeShields", 10);
+        }
+        else base.Explode();
     }
 }

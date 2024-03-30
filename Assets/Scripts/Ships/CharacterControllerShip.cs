@@ -117,7 +117,7 @@ public class CharacterControllerShip : Singleton<CharacterControllerShip>
         rb2D.AddForce(driftVelocity);
     }
 
-    public void Explode()
+    public virtual void Explode()
     {
         GameManager.Instance.lives--;
         GameManager.Instance.LooseALife();

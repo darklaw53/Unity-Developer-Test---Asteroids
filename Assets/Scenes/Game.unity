@@ -3137,7 +3137,7 @@ MonoBehaviour:
   scoreText: {fileID: 750056898}
   score: 0
   asteroidsPertLevel: 5
-  UFOsPerLevel: -655013056
+  UFOsPerLevel: 2
   currentLevel: 0
   UFOList: []
 --- !u!1 &2007235170

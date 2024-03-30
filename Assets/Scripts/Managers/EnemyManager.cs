@@ -37,7 +37,7 @@ public class EnemyManager : Singleton<EnemyManager>
         if (ratio < 0) ratio = 0;
         return Mathf.CeilToInt(GameManager.Instance.UFOsPerLevel * ratio);
     }
-
+    
     public void InstantiateUFOAtRandomEdge(GameObject UFO)
     {
         Vector3 spawnPosition = Vector3.zero;
@@ -53,7 +53,7 @@ public class EnemyManager : Singleton<EnemyManager>
                 break;
         }
 
-        var x = Instantiate(UFO, spawnPosition, transform.rotation);
+        var x = Instantiate(UFO, spawnPosition, Quaternion.identity);
         x.transform.parent = enemyParent;
     }
 }

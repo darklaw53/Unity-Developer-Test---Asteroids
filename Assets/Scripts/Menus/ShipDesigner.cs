@@ -36,6 +36,7 @@ public class ShipDesigner : MonoBehaviour
         {
             case 1:
                 currentColor = ColorType.Red;
+                patternPreview.sprite = patternRed;
                 foreach (Sprite sprite in shipsRed)
                 {
                     if (sprite == shipLayout.sprite)
@@ -48,6 +49,7 @@ public class ShipDesigner : MonoBehaviour
                 break;
             case 2:
                 currentColor = ColorType.Green;
+                patternPreview.sprite = patternGreen;
                 foreach (Sprite sprite in shipsGreen)
                 {
                     if (sprite == shipLayout.sprite)
@@ -60,6 +62,7 @@ public class ShipDesigner : MonoBehaviour
                 break;
             case 3:
                 currentColor = ColorType.Blue;
+                patternPreview.sprite = patternBlue;
                 foreach (Sprite sprite in shipsBlue)
                 {
                     if (sprite == shipLayout.sprite)
@@ -72,6 +75,7 @@ public class ShipDesigner : MonoBehaviour
                 break;
             default:
                 currentColor = ColorType.Green;
+                patternPreview.sprite = patternGreen;
                 foreach (Sprite sprite in shipsGreen)
                 {
                     if (sprite == shipLayout.sprite)

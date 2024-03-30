@@ -8,6 +8,9 @@ public class Asteroid : MonoBehaviour
     public Rigidbody2D rb2D;
     public int pointValue;
 
+    public float minTorque = -100f;
+    public float maxTorque = 100f;
+
     public string ammoTag;
 
     public GameObject smallerAsteroids;
@@ -17,11 +20,12 @@ public class Asteroid : MonoBehaviour
         Impulse();
     }
 
-    void Impulse()
+    public void Impulse()
     {
         if (rb2D != null)
         {
             rb2D.velocity = transform.up * speed + new Vector3(rb2D.velocity.x, rb2D.velocity.y, 0);
+            rb2D.AddTorque(Random.Range(minTorque, maxTorque));
         }
     }
 

@@ -108,14 +108,12 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    protected virtual void FireWeapon()
+    public virtual void FireWeapon()
     {
-        if (targetRandomly)
-        {
-            float randomRotation = Random.Range(0f, 360f);
-            Quaternion rotation = Quaternion.Euler(0, 0, randomRotation);
-            targetDirection = rotation;
-        }
+        float randomRotation = Random.Range(0f, 360f);
+        Quaternion rotation = Quaternion.Euler(0, 0, randomRotation);
+        targetDirection = rotation;
+
         var x = Instantiate(ammo, transform.position, targetDirection);
         x.GetComponent<Rigidbody2D>().velocity = rb2D.velocity;
     }

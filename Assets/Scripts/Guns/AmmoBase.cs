@@ -26,7 +26,7 @@ public class AmmoBase : MonoBehaviour
         }
     }
 
-    protected virtual void Impulse()
+    public virtual void Impulse()
     {
         if (rb2D != null)
         {

@@ -89,28 +89,43 @@ public class ScreenWrapperManager : MonoBehaviour
             else
             {
                 Vector3 newPosition = Vector3.zero;
-                GameObject obj = objectTransform.gameObject;
 
                 int edgeIndex = Random.Range(0, 4);
                 switch (edgeIndex)
                 {
                     case 0: // Top edge
-                        newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y + obj.transform.localScale.y / 1.5f, 0f);
+                        newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y + objectTransform.localScale.y / 1.5f, 0f);
                         break;
                     case 1: // Bottom edge
-                        newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), -screenBounds.y - obj.transform.localScale.y / 1.5f, 0f);
+                        newPosition = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), -screenBounds.y - objectTransform.localScale.y / 1.5f, 0f);
                         break;
                     case 2: // Left edge
-                        newPosition = new Vector3(-screenBounds.x - obj.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
+                        newPosition = new Vector3(-screenBounds.x - objectTransform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
                         break;
                     case 3: // Right edge
-                        newPosition = new Vector3(screenBounds.x + obj.transform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
+                        newPosition = new Vector3(screenBounds.x + objectTransform.localScale.y / 1.5f, Random.Range(-screenBounds.y, screenBounds.y), 0f);
                         break;
                 }
 
                 Vector3 directionToCenter = (new Vector3(Random.Range(-3, 4), Random.Range(-3, 4), 0) - newPosition).normalized;
-                obj.transform.position = newPosition;
-                obj.transform.up = directionToCenter;
+                objectTransform.position = newPosition;
+                objectTransform.up = directionToCenter;
+
+                var x = objectTransform.gameObject.GetComponent<Asteroid>();
+                if (x != null)
+                {
+                    x.rb2D.velocity = new Vector2 (0,0);
+                    x.Impulse();
+                }
+                else
+                {
+                    var y = objectTransform.gameObject.GetComponent<AmmoBase>();
+                    if (y != null)
+                    {
+                        y.rb2D.velocity = new Vector2(0, 0);
+                        y.Impulse();
+                    }
+                }
             }
         }
     }

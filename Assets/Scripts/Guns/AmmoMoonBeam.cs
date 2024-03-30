@@ -9,7 +9,7 @@ public class AmmoMoonBeam : AmmoBase
         gameObject.tag = ammoTag;
     }
 
-    protected override void Impulse()
+    public override void Impulse()
     {
         //dont
     }

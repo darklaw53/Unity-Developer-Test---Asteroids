@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c3d839a81a75442bdd70960aff1449, type: 3}
+  m_Name: ManagerVer
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 1190254718, guid: 9b5c5dccb837f2046a43ff0882010abb, type: 3}
+  gunPrefab: {fileID: 2361748923257489529, guid: 94d9259c11b0eec4cba548582aa7f038, type: 3}
+  rotationSpeed: 160
+  thrustSpeed: 4
+  driftAmount: 1.5
+  RGB: 3

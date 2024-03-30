@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4193219141015582410
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 603576003763370293, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      propertyPath: m_Name
+      value: AtomicDarts Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834714536703720637, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364548295730769962, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364548295730769962, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364548295730769962, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364548295730769962, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 835181482752253917, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 603576003763370293, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1532444509395851595}
+  m_SourcePrefab: {fileID: 100100000, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+--- !u!4 &2542134316157258359 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1834714536703720637, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+  m_PrefabInstance: {fileID: 4193219141015582410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3625709664560861183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 603576003763370293, guid: 33741281f2fa2c64a9ff0dff1f24bed5, type: 3}
+  m_PrefabInstance: {fileID: 4193219141015582410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1532444509395851595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625709664560861183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb258eff24e98746b46ead13554ec0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireCooldown: 0.05
+  ammunition: {fileID: 4000627845602093465, guid: ba61dfe90812c3549bd6868b17edc3d1, type: 3}
+  firePoint: {fileID: 2542134316157258359}

@@ -1,5 +1,5 @@
-def PROJECT_NAME = "Data2073"
-def CUSTOM_WORKSPACE = "C:\\Users\\Osten Games\\Documents\\GitHub\\data2073(Clone)\\${PROJECT_NAME}"
+def PROJECT_NAME = "Unity-Developer-Test---Asteroids"
+def CUSTOM_WORKSPACE = "C:\\Users\\Osten Games\\Documents\\GitHub\\Unity-Developer-Test---Asteroids\\${PROJECT_NAME}"
 def UNITY_VERSION = "2022.3.42f1"
 def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
 
@@ -30,7 +30,7 @@ pipeline {
                 script {
                     withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]) {
                         bat '''
-                        "%UNITY_PATH%/Unity.exe" -quit -batchmode -projectPath %PROJECT_PATH% -executeMethod Data2073.BuildScript.BuildWindows -logFile -
+                        "%UNITY_PATH%/Unity.exe" -quit -batchmode -projectPath %PROJECT_PATH% -executeMethod BuildScript.BuildWindows -logFile -
                         '''
                     }
                 }

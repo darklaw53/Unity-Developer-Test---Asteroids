@@ -6,6 +6,7 @@ def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
 pipeline {
     environment {
         PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
+        UNITY_LICENSE_PATH = "C:\\Users\\Jenkins\\.local\\share\\unity3d\\Unity\\Unity_lic.ulf"
     }
 
     agent {
@@ -19,6 +20,26 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Activate Unity License') {
+            steps {
+                script {
+                    withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]) {
+                        bat '''
+                        if not exist "%UNITY_LICENSE_PATH%" (
+                            echo "Generating manual activation file..."
+                            "%UNITY_PATH%/Unity.exe" -batchmode -createManualActivationFile -logFile -quit
+                            echo "Upload the generated .alf file to Unity's license page and download the .ulf file."
+                            exit /b 1
+                        ) else (
+                            echo "Applying Unity license..."
+                            "%UNITY_PATH%/Unity.exe" -batchmode -manualLicenseFile "%UNITY_LICENSE_PATH%" -logFile -quit
+                        )
+                        '''
+                    }
+                }
             }
         }
 

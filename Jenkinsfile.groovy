@@ -31,6 +31,8 @@ pipeline {
                     withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]) {
                         bat '''
                         echo "Requesting Unity license with activation token..."
+                        echo "%UNITY_USERNAME%"
+                        echo "%UNITY_PASSWORD%"
                         "%UNITY_PATH%/Unity.exe" -batchmode -logFile -quit -username "%UNITY_USERNAME%" -password "%UNITY_PASSWORD%" -nographics -returnlicense
                         '''
                     }

@@ -1,11 +1,11 @@
 def PROJECT_NAME = "Unity-Developer-Test---Asteroids"
-def CUSTOM_WORKSPACE = "C:\\Users\\Osten Games\\Documents\\GitHub\\Unity-Developer-Test---Asteroids\\${PROJECT_NAME}-proj"
+def CUSTOM_WORKSPACE = "C:\\Users\\Osten Games\\Documents\\GitHub\\Unity-Developer-Test---Asteroids"
 def UNITY_VERSION = "2022.3.42f1"
 def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
 
 pipeline {
     environment {
-        PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
+        PROJECT_PATH = "${CUSTOM_WORKSPACE}"
         UNITY_USERNAME = "marceloschulze@gmail.com"
         UNITY_PASSWORD = "Marcelo53"
         ALF_FILE_PATH = "${CUSTOM_WORKSPACE}\\Unity_lic.alf"  // Path to save the .alf file in the workspace

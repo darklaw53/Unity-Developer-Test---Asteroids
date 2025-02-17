@@ -7,7 +7,7 @@ pipeline {
     environment {
         PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
         UNITY_LICENSE_PATH = "C:\\ProgramData\\Jenkins\\Unity\\Unity_lic.ulf"
-        UNITY_USERNAME = "marcelo"
+        UNITY_USERNAME = "marceloschulze@gmail.com"
         UNITY_PASSWORD = "Marcelo53"
     }
 

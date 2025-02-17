@@ -6,9 +6,9 @@ def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
 pipeline {
     environment {
         PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
-        UNITY_LICENSE_PATH = "C:\\ProgramData\\Jenkins\\Unity\\Unity_lic.ulf"
         UNITY_USERNAME = "marceloschulze@gmail.com"
         UNITY_PASSWORD = "Marcelo53"
+        ALF_FILE_PATH = "${CUSTOM_WORKSPACE}\\Unity_lic.alf"  // Path to save the .alf file in the workspace
     }
 
     agent {
@@ -29,12 +29,14 @@ pipeline {
             steps {
                 script {
                     withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]) {
-                        bat '''
-                        echo "Requesting Unity license with activation token..."
-                        echo "%UNITY_USERNAME%"
-                        echo "%UNITY_PASSWORD%"
-                        "%UNITY_PATH%/Unity.exe" -batchmode -logFile -quit -username "%UNITY_USERNAME%" -password "%UNITY_PASSWORD%" -nographics -returnlicense
-                        '''
+                        try {
+                            bat '''
+                            echo "Requesting Unity license with activation token..."
+                            "%UNITY_PATH%/Unity.exe" -batchmode -logFile -quit -username "%UNITY_USERNAME%" -password "%UNITY_PASSWORD%" -nographics -manualLicenseFile "%ALF_FILE_PATH%"
+                            '''
+                        } catch (Exception e) {
+                            echo "Unity license activation failed, but continuing..."
+                        }
                     }
                 }
             }

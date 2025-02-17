@@ -6,7 +6,7 @@ def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
 pipeline {
     environment {
         PROJECT_PATH = "${CUSTOM_WORKSPACE}\\${PROJECT_NAME}"
-        UNITY_LICENSE_PATH = "C:\\Users\\Jenkins\\.local\\share\\unity3d\\Unity\\Unity_lic.ulf"
+        UNITY_LICENSE_PATH = "C:\\ProgramData\\Jenkins\\Unity\\Unity_lic.ulf"
     }
 
     agent {

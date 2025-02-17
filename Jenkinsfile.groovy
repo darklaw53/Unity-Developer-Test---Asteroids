@@ -2,7 +2,7 @@ def PROJECT_NAME = "Unity-Developer-Test---Asteroids"
 def CUSTOM_WORKSPACE = "C:\\Users\\Osten Games\\Documents\\GitHub\\Unity-Developer-Test---Asteroids\\${PROJECT_NAME}"
 def UNITY_VERSION = "2022.3.42f1"
 def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
-def UNITY_USERNAME = "marceloschulze@gmail.com"
+def UNITY_USERNAME = "marcelo"
 def UNITY_PASSWORD = "Marcelo53"
 
 pipeline {

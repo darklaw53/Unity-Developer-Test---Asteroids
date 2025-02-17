@@ -2,6 +2,8 @@ def PROJECT_NAME = "Unity-Developer-Test---Asteroids"
 def CUSTOM_WORKSPACE = "C:\\Users\\Osten Games\\Documents\\GitHub\\Unity-Developer-Test---Asteroids\\${PROJECT_NAME}"
 def UNITY_VERSION = "2022.3.42f1"
 def UNITY_INSTALLATION = "D:\\unity\\${UNITY_VERSION}\\Editor"
+def UNITY_USERNAME = "marceloschulze@gmail.com"
+def UNITY_PASSWORD = "Marcelo53"
 
 pipeline {
     environment {
@@ -28,15 +30,8 @@ pipeline {
                 script {
                     withEnv(["UNITY_PATH=${UNITY_INSTALLATION}"]) {
                         bat '''
-                        if not exist "%UNITY_LICENSE_PATH%" (
-                            echo "Generating manual activation file..."
-                            "%UNITY_PATH%/Unity.exe" -batchmode -createManualActivationFile -logFile -quit
-                            echo "Upload the generated .alf file to Unity's license page and download the .ulf file."
-                            exit /b 1
-                        ) else (
-                            echo "Applying Unity license..."
-                            "%UNITY_PATH%/Unity.exe" -batchmode -manualLicenseFile "%UNITY_LICENSE_PATH%" -logFile -quit
-                        )
+                        echo "Requesting Unity license with activation token..."
+                        "%UNITY_PATH%/Unity.exe" -batchmode -logFile -quit -username "%UNITY_USERNAME%" -password "%UNITY_PASSWORD%" -nographics -returnlicense
                         '''
                     }
                 }
